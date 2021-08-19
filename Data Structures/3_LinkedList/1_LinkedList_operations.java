@@ -203,14 +203,14 @@ public class Main {
         }
 
         public int mid() {
-            Node f = head;
-            Node s = head;
-            while (f.next != null && f.next.next != null) {
-                f = f.next.next;
-                s = s.next;
-            }
-            return s.data;
-        }
+			Node fast = head;
+			Node slow = head;
+			while (fast.next != null && fast.next.next != null) {
+				fast = fast.next.next;
+				slow = slow.next;
+			}
+			return slow.data;
+		}
 
         public static LinkedList mergeTwoSortedLists(LinkedList l1, LinkedList l2) {
             LinkedList ml = new LinkedList();
