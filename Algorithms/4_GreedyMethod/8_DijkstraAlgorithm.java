@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class Algorithm {
+public class DijkstraAlgorithm {
 
 	// utility function to get the minimum vertex available
 	private static int getMinimumVertex(int[] distance, boolean[] processed, int nv) {
-		
+
 		// the current distance of the vertex is maximum
 		int currMin = Integer.MAX_VALUE;
 		// variable to store the minimum vertex
@@ -25,17 +25,18 @@ public class Algorithm {
 
 	// function for Dijkstra algorithm
 	private static void Dijkstra(int[][] graph, int nv) {
-		
+
 		// array to maintain the parent relation
 		int[] parent = new int[nv];
-		
+
 		// to store the minimum distance available from the source
 		int[] distance = new int[nv];
-		
+
 		// keeps track of all the nodes which already included in the SPG
 		boolean[] processed = new boolean[nv];
 
-		// initially the parents are -1, distance are infinite, all nodes are not processed
+		// initially the parents are -1, distance are infinite, all nodes are not
+		// processed
 		for (int i = 0; i < nv; i++) {
 			parent[i] = -1;
 			distance[i] = Integer.MAX_VALUE;
@@ -56,13 +57,13 @@ public class Algorithm {
 
 			for (int v = 0; v < nv; v++) {
 
-				/**
-				 * Check: 
-				 * 1. If there exist an edge in the graph (u to v) 
-				 * 2. The node v should't be processed 
-				 * 3. Adding the node should be benefited as distance(u) + graph(u, v) < distance(v) 
-				 * 4. The distance(v) shouldn't be infinite as distance(v) += graph(u, v) becomes -ve
-				 */
+				// Check:
+				// 1. If there exist an edge in the graph (u to v)
+				// 2. The node v should't be processed
+				// 3. Adding the node should be benefited as distance(u) + graph(u, v) <
+				// distance(v)
+				// 4. The distance(v) shouldn't be infinite as distance(v) += graph(u, v)
+				// becomes -ve
 				if (graph[u][v] != 0 && processed[v] == false && distance[u] + graph[u][v] < distance[v]
 						&& distance[u] != Integer.MAX_VALUE) {
 					parent[v] = u;
@@ -70,7 +71,7 @@ public class Algorithm {
 				}
 			}
 		}
-		
+
 		// print the shortest path graph
 		printShortestPathGraph(graph, parent, nv);
 	}
@@ -81,7 +82,7 @@ public class Algorithm {
 			System.out.println("Source: " + parent[i] + " Destination: " + i + " Weight: " + graph[parent[i]][i]);
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
