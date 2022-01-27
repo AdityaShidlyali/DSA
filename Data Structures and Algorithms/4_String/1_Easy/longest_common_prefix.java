@@ -45,3 +45,23 @@ class Solution {
 		return answer;
 	}
 }
+
+// Efficient solution
+/*
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        
+        int idx = strs[0].length();
+        for(String str: strs){
+            idx = Math.min(idx, str.length());
+            for(int i = 0; i < idx; ++i){
+                if(str.charAt(i) != strs[0].charAt(i)){
+                    idx = i;
+                    break;
+                }
+            }
+        }
+        return strs[0].substring(0, idx);
+    }
+}
+*/
