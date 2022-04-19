@@ -16,22 +16,8 @@ public class Test {
 		
 		input.close();
 	}
-}
 
-
-// Recursive approach
-public class Test {
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-
-		System.out.println("Enter a number: ");
-		int n = input.nextInt();
-
-		System.out.println("Factorial is: " + factorial(n));
-
-		input.close();
-	}
-
+	// Recursive approach
 	private static int factorial(int n) {
 		if (n == 0 || n == 1) {
 			return 1;
@@ -40,4 +26,3 @@ public class Test {
 		return n * factorial(n - 1);
 	}
 }
-
