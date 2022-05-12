@@ -1,5 +1,5 @@
 // https://practice.geeksforgeeks.org/problems/power-set4302/1/#
-// Time complexity: O(N)
+// Time complexity: O(2^N)
 
 public class Solution {
 
