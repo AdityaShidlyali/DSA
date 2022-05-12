@@ -1,3 +1,6 @@
+// https://practice.geeksforgeeks.org/problems/swap-all-odd-and-even-bits-1587115621/1/?track=DSASP-BitMagic&batchId=154
+// Time Complexity O(N)
+
 class Solution {
 
 	public static int swapBits(int n) {
