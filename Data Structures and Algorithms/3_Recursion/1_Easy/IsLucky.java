@@ -1,3 +1,5 @@
+// https://practice.geeksforgeeks.org/problems/lucky-numbers2911/1/?track=P100-Recursion&batchId=238
+
 class Solution {
 	private static int counter = 2;
 
