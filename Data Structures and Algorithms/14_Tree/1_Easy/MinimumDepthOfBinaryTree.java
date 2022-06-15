@@ -1,9 +1,13 @@
 // Using DFS
+/*
+    Time Complexity: O(maximum depth of the tree)
+    Auxiliary space: O(max height of tree + 1)
+*/
 class Solution {
     public int minDepth(TreeNode root) {
         if(root==null)
             return 0;
-         
+        
         if (root.left == null && root.right == null) {
             return 1;
         }
@@ -18,8 +22,8 @@ class Solution {
 
 // Using BFS
 /*
-Time complexity: O(number of nodes ie., minimum height of the binary tree)
-space complexity
+    Time complexity: O(number of nodes ie., minimum height of the binary tree)
+    Space complexity: O(diameter of the tree)
 */
 class Solution {
     public int minDepth(TreeNode root) {
