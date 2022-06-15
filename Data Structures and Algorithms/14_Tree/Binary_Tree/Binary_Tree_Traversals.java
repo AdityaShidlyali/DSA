@@ -23,6 +23,10 @@ class BinaryTree {
         this.root = new Node(data);
     }
 
+    /*
+        Time Complexity: O(n)
+        Auxiliary space: O(height of tree (longest path from root to leaf node))
+    */
     private void printPreorderTraversal(Node node) {
         if (node == null) {
             return;
@@ -38,6 +42,10 @@ class BinaryTree {
         printPreorderTraversal(node.right);
     }
 
+    /*
+        Time Complexity: O(n)
+        Auxiliary space: O(height of tree (longest path from root to leaf node))
+    */
     private void printInorderTraversal(Node node) {
         if (node == null) {
             return;
@@ -53,6 +61,10 @@ class BinaryTree {
         printInorderTraversal(node.right);
     }
 
+    /*
+        Time Complexity: O(n)
+        Auxiliary space: O(height of tree (longest path from root to leaf node))
+    */
     private void printPostorderTraversal(Node node) {
         if (node == null) {
             return;

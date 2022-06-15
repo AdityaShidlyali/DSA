@@ -1,3 +1,7 @@
+/*
+Time Complexity: T(n)
+Auxiliary space complexity: O(1)
+*/
 
 import java.util.Scanner;
 

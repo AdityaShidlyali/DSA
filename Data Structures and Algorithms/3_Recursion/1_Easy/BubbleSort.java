@@ -1,3 +1,8 @@
+/*
+Time Complexity: O(n*n)
+Auxiliary Space: O(n)
+*/
+
 class Solution {
 
 	private static void swap(int[] arr, int i, int j) {

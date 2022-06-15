@@ -1,9 +1,17 @@
+/*
+Time Complexity: O(log n)
 
+Auxiliary Space: O(log n)
+*/
 import java.util.Scanner;
 
 public class BinaryBitCount{
 
     static int binaryBitsCount(int n) {
+
+        if (n == 0) {
+            return 0;
+        }
 
         if (n == 1) {
             return 1;

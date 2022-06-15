@@ -1,3 +1,9 @@
+/*
+Time Complexity: O(log n)
+
+Auxiliary Space: O(1)
+*/
+
 class Solution {
 
 	public boolean binarySearch(int[] arr, int low, int high, int key) {
