@@ -1,3 +1,5 @@
+// https://practice.geeksforgeeks.org/problems/subset-sums2234/1
+
 public class Test {
 
 	private static int subsetSum(int n, int[] arr, int sum) {
